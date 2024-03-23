@@ -13,11 +13,11 @@ cursor = conn.cursor()
 # Define the SQL statement for creating the transactions table
 create_table_query = '''CREATE TABLE IF NOT EXISTS transactions (
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        account TEXT NOT NULL,
-                        date TEXT NOT NULL,
+                        date TEXT,
                         amount REAL NOT NULL,
-                        payment_category TEXT NOT NULL,
-                        entity TEXT NOT NULL
+                        subcategory,
+                        entity TEXT,
+                        category TEXT
                     );'''
 
 # Execute the SQL statement to create the table
